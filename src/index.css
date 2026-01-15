@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-schar-white text-schar-black font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container-schar {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-schar-black text-schar-white px-8 py-3 font-semibold 
+           transition-all duration-300 hover:bg-schar-gray-dark 
+           active:scale-95 uppercase tracking-wider text-sm;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-schar-black text-schar-black px-8 py-3 
+           font-semibold transition-all duration-300 
+           hover:bg-schar-black hover:text-schar-white 
+           active:scale-95 uppercase tracking-wider text-sm;
+  }
+  
+  .product-card {
+    @apply cursor-pointer transition-all duration-300;
+  }
+  
+  .nav-link {
+    @apply text-schar-black font-medium tracking-wide 
+           transition-all duration-200 hover:text-schar-gray 
+           uppercase text-sm;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold 
+           tracking-tight uppercase mb-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
